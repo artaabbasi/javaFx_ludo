@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ludo.ludo.GameStartController">
+   <children>
+      <Label layoutX="138.0" layoutY="94.0" text="Green" textFill="#31d000">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="green_nick_name" layoutX="242.0" layoutY="97.0" prefHeight="21.0" prefWidth="138.0" />
+      <RadioButton fx:id="green_rdio_butt" layoutX="402.0" layoutY="101.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+      <Label layoutX="149.0" layoutY="137.0" text="Red" textFill="#cf0000">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="red_nick_name" layoutX="242.0" layoutY="140.0" prefHeight="21.0" prefWidth="138.0" />
+      <RadioButton fx:id="red_rdio_butt" layoutX="402.0" layoutY="144.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+      <Label layoutX="147.0" layoutY="184.0" text="Blue" textFill="#0075cf">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="blue_nick_name" layoutX="242.0" layoutY="182.0" prefHeight="21.0" prefWidth="138.0" />
+      <RadioButton fx:id="blue_rdio_butt" layoutX="402.0" layoutY="186.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+      <Label layoutX="138.0" layoutY="223.0" text="Yellow" textFill="#c8cf00">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="yellow_nick_name" layoutX="242.0" layoutY="226.0" prefHeight="21.0" prefWidth="138.0" />
+      <RadioButton fx:id="yellow_rdio_butt" layoutX="402.0" layoutY="230.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+      <Button fx:id="start_game_button" layoutX="274.0" layoutY="293.0" mnemonicParsing="false" onAction="#onStartButton" text="Start game" />
+   </children>
+</AnchorPane>

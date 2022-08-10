@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ludo.ludo.WellcomeController">
+   <children>
+      <Label layoutX="220.0" layoutY="50.0" prefHeight="30.0" prefWidth="204.0" text="Feel Free to play !">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="sign_in_but" layoutX="274.0" layoutY="162.0" mnemonicParsing="false" onAction="#onSignInClick" text="Sign in" />
+      <Button fx:id="sign_up_but" layoutX="274.0" layoutY="210.0" mnemonicParsing="false" onAction="#onSignUpClick" text="sign up" />
+   </children>
+</AnchorPane>
