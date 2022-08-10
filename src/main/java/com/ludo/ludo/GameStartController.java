@@ -29,7 +29,7 @@ public class GameStartController {
 
     public void onStartButton(ActionEvent clickEvent) throws IOException {
 
-
+        Boolean flag = false;
         Boolean has_green = false;
         Boolean has_red = false;
         Boolean has_blue = false;
@@ -72,6 +72,7 @@ public class GameStartController {
                     green_player.game = game;
                     green_player.number = 1;
                     green_player.store();
+                    flag = true;
                 }
             }
             if (has_red){
@@ -87,6 +88,7 @@ public class GameStartController {
                     red_player.game = game;
                     red_player.number = 2;
                     red_player.store();
+                    flag = true;
                 }
             }
             if (has_blue){
@@ -102,7 +104,7 @@ public class GameStartController {
                     blue_player.game = game;
                     blue_player.number = 3;
                     blue_player.store();
-
+                    flag = true;
                 }
             }
             if (has_yellow){
@@ -118,10 +120,14 @@ public class GameStartController {
                     yellow_player.game = game;
                     yellow_player.number = 4;
                     yellow_player.store();
+                    flag = true;
                 }
             }
 
         }
-
+        if (flag){
+            LudoApplication scene = new LudoApplication();
+            scene.onCustomChangeScene("game_view.fxml", 899, 600);
+        }
     }
 }

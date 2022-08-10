@@ -2,9 +2,12 @@ package com.ludo.DB;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Game implements Serializable {
     private static final long serialVersionUID = 1234567L;
+    public UUID uuid = UUID.randomUUID();
+
     public void store(){
         FileManager fm = new FileManager();
         DB db = fm.read_object();

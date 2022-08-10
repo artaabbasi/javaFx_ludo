@@ -28,4 +28,9 @@ public class LudoApplication extends Application {
         Scene scene = new Scene(fxmlLoad.load(), 600, 400);
         stg.setScene(scene);
     }
+    public void onCustomChangeScene(String fxml, int v, int v1) throws IOException {
+        FXMLLoader fxmlLoad = new FXMLLoader(LudoApplication.class.getResource(fxml));
+        Scene scene = new Scene(fxmlLoad.load(), v, v1);
+        stg.setScene(scene);
+    }
 }
