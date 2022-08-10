@@ -7,6 +7,6 @@ public class Coin implements Serializable {
     public Integer id;
     public Game game;
     public Integer type;
-    public Integer position;
-    public Integer abs_position;
+    public Integer position = 0;
+    public Integer abs_position = 0;
 }

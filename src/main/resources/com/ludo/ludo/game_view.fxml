@@ -33,6 +33,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
+                  <Circle fx:id="turn_crcl1" fill="WHITE" layoutX="65.0" layoutY="23.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
                </children></AnchorPane>
             <Circle fill="WHITE" layoutX="350.0" layoutY="224.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="WHITE" layoutX="384.0" layoutY="224.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
@@ -107,20 +108,21 @@
       <AnchorPane layoutX="650.0" layoutY="128.0" prefHeight="345.0" prefWidth="176.0" style="-fx-background-color: #787e87;">
          <children>
             <Label layoutX="22.0" layoutY="45.0" text="Click to move your coin !" textFill="WHITE" />
-            <Button layoutX="36.0" layoutY="101.0" mnemonicParsing="false" text="Coin 1" />
-            <Label layoutX="109.0" layoutY="105.0" text="#" />
-            <Button layoutX="36.0" layoutY="154.0" mnemonicParsing="false" text="Coin 2" />
-            <Label layoutX="109.0" layoutY="158.0" text="#" />
-            <Button layoutX="36.0" layoutY="202.0" mnemonicParsing="false" text="Coin 3" />
-            <Label layoutX="109.0" layoutY="206.0" text="#" />
-            <Button layoutX="36.0" layoutY="255.0" mnemonicParsing="false" text="Coin 4" />
-            <Label layoutX="109.0" layoutY="259.0" text="#" />
+            <Button layoutX="36.0" layoutY="101.0" mnemonicParsing="false" onAction="#onCoinButton" text="Coin 1" />
+            <Label fx:id="coin_1_text" layoutX="109.0" layoutY="105.0" text="#" />
+            <Button layoutX="36.0" layoutY="154.0" mnemonicParsing="false" onAction="#onCoinButton" text="Coin 2" />
+            <Label fx:id="coin_2_text" layoutX="109.0" layoutY="158.0" text="#" />
+            <Button layoutX="36.0" layoutY="202.0" mnemonicParsing="false" onAction="#onCoinButton" text="Coin 3" />
+            <Label fx:id="coin_3_text" layoutX="109.0" layoutY="206.0" text="#" />
+            <Button layoutX="36.0" layoutY="255.0" mnemonicParsing="false" onAction="#onCoinButton" text="Coin 4" />
+            <Label fx:id="coin_4_text" layoutX="109.0" layoutY="259.0" text="#" />
             <Circle fx:id="turn_crcl" fill="WHITE" layoutX="54.0" layoutY="25.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
             <Label layoutX="68.0" layoutY="12.0" text="Turn" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
+            <Button fx:id="next_button" layoutX="68.0" layoutY="298.0" mnemonicParsing="false" onAction="#onCoinButton" text="Next" />
          </children>
       </AnchorPane>
    </children>
