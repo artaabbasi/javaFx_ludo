@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ludo.ludo.GameController">
    <children>
-      <AnchorPane layoutX="69.0" layoutY="45.0" prefHeight="510.0" prefWidth="531.0" style="-fx-background-color: #787e87;">
+      <AnchorPane layoutX="49.0" layoutY="46.0" prefHeight="510.0" prefWidth="531.0" style="-fx-background-color: #787e87;">
          <children>
             <Circle fill="WHITE" layoutX="49.0" layoutY="223.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="DODGERBLUE" layoutX="83.0" layoutY="223.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
@@ -27,13 +27,14 @@
             <Circle fill="DODGERBLUE" layoutX="186.0" layoutY="261.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
             <AnchorPane layoutX="207.0" layoutY="198.0" prefHeight="126.0" prefWidth="125.0" style="-fx-background-color: #c26853; -fx-border-color: #ffffff; -fx-border-width: 5;">
                <children>
-                  <Button fx:id="dice_button" layoutX="27.0" layoutY="80.0" minHeight="25.0" minWidth="76.0" mnemonicParsing="false" onAction="#onDiceButton" text="Start game" />
-                  <Label fx:id="dice_lable" alignment="CENTER" layoutX="40.0" layoutY="33.0" prefHeight="30.0" prefWidth="50.0" textAlignment="CENTER">
+                  <Button fx:id="dice_button" layoutX="25.0" layoutY="51.0" minHeight="25.0" minWidth="76.0" mnemonicParsing="false" onAction="#onDiceButton" text="Start game" />
+                  <Label fx:id="dice_lable" alignment="CENTER" layoutX="53.0" layoutY="8.0" prefHeight="30.0" prefWidth="50.0" textAlignment="CENTER">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Circle fx:id="turn_crcl1" fill="WHITE" layoutX="65.0" layoutY="23.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="turn_crcl1" fill="WHITE" layoutX="27.0" layoutY="23.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Button fx:id="next_button" layoutX="43.0" layoutY="87.0" mnemonicParsing="false" onAction="#onCoinButton" text="Next" />
                </children></AnchorPane>
             <Circle fill="WHITE" layoutX="350.0" layoutY="224.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="WHITE" layoutX="384.0" layoutY="224.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
@@ -104,6 +105,82 @@
             <Label fx:id="yellow_nickname" layoutX="427.0" layoutY="360.0" />
             <Label fx:id="red_nickname" layoutX="62.0" layoutY="360.0" />
             <Label fx:id="green_nickname" layoutX="452.0" layoutY="137.0" />
+            <Label layoutX="80.0" layoutY="215.0" text="1" />
+            <Label layoutX="115.0" layoutY="216.0" text="2" />
+            <Label layoutX="149.0" layoutY="216.0" text="3" />
+            <Label layoutX="183.0" layoutY="216.0" text="4" />
+            <Label layoutX="222.0" layoutY="169.0" text="5" />
+            <Label layoutX="223.0" layoutY="137.0" text="6" />
+            <Label layoutX="223.0" layoutY="103.0" text="7" />
+            <Label layoutX="222.0" layoutY="69.0" text="8" />
+            <Label layoutX="222.0" layoutY="35.0" text="9" />
+            <Label layoutX="263.0" layoutY="35.0" text="10" />
+            <Label layoutX="304.0" layoutY="35.0" text="11" />
+            <Label layoutX="303.0" layoutY="68.0" text="12" />
+            <Label layoutX="303.0" layoutY="103.0" text="13" />
+            <Label layoutX="303.0" layoutY="137.0" text="14" />
+            <Label layoutX="303.0" layoutY="171.0" text="15" />
+            <Label layoutX="344.0" layoutY="216.0" text="16" />
+            <Label layoutX="378.0" layoutY="216.0" text="17" />
+            <Label layoutX="413.0" layoutY="216.0" text="18" />
+            <Label layoutX="445.0" layoutY="216.0" text="19" />
+            <Label layoutX="481.0" layoutY="216.0" text="20" />
+            <Label layoutX="481.0" layoutY="253.0" text="21" />
+            <Label layoutX="481.0" layoutY="291.0" text="22" />
+            <Label layoutX="447.0" layoutY="291.0" text="23" />
+            <Label layoutX="413.0" layoutY="290.0" text="24" />
+            <Label layoutX="378.0" layoutY="290.0" text="25" />
+            <Label layoutX="345.0" layoutY="290.0" text="26" />
+            <Label layoutX="304.0" layoutY="334.0" text="27" />
+            <Label layoutX="303.0" layoutY="369.0" text="28" />
+            <Label layoutX="304.0" layoutY="403.0" text="29" />
+            <Label layoutX="304.0" layoutY="435.0" text="30" />
+            <Label layoutX="304.0" layoutY="470.0" text="31" />
+            <Label layoutX="262.0" layoutY="470.0" text="32" />
+            <Label layoutX="219.0" layoutY="470.0" text="33" />
+            <Label layoutX="219.0" layoutY="437.0" text="34" />
+            <Label layoutX="220.0" layoutY="403.0" text="35" />
+            <Label layoutX="219.0" layoutY="369.0" text="36" />
+            <Label layoutX="220.0" layoutY="334.0" text="37" />
+            <Label layoutX="180.0" layoutY="290.0" text="38" />
+            <Label layoutX="146.0" layoutY="290.0" text="39" />
+            <Label layoutX="112.0" layoutY="290.0" text="40" />
+            <Label layoutX="76.0" layoutY="291.0" text="41" />
+            <Label layoutX="41.0" layoutY="290.0" text="42" />
+            <Label layoutX="41.0" layoutY="253.0" text="43" />
+            <Label layoutX="41.0" layoutY="215.0" text="44" />
+            <Label layoutX="262.0" layoutY="69.0" text="#1" />
+            <Label layoutX="259.0" layoutY="103.0" text="#2" />
+            <Label layoutX="259.0" layoutY="137.0" text="#3" />
+            <Label layoutX="263.0" layoutY="171.0" text="#4" />
+            <Label layoutX="445.0" layoutY="252.0" text="#1" />
+            <Label layoutX="412.0" layoutY="252.0" text="#2" />
+            <Label layoutX="377.0" layoutY="252.0" text="#3" />
+            <Label layoutX="345.0" layoutY="252.0" text="#4" />
+            <Label layoutX="261.0" layoutY="437.0" text="#1" />
+            <Label layoutX="261.0" layoutY="403.0" text="#2" />
+            <Label layoutX="261.0" layoutY="369.0" text="#3" />
+            <Label layoutX="261.0" layoutY="334.0" text="#4" />
+            <Label layoutX="76.0" layoutY="252.0" text="#1" />
+            <Label layoutX="111.0" layoutY="252.0" text="#2" />
+            <Label layoutX="146.0" layoutY="253.0" text="#3" />
+            <Label layoutX="179.0" layoutY="253.0" text="#4" />
+            <Label fx:id="blue_coin_1" alignment="CENTER" layoutX="51.0" layoutY="48.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="blue_coin_2" alignment="CENTER" layoutX="82.0" layoutY="48.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="blue_coin_3" alignment="CENTER" layoutX="50.0" layoutY="90.0" prefHeight="17.0" prefWidth="14.0" text="\$" />
+            <Label fx:id="blue_coin_4" alignment="CENTER" layoutX="82.0" layoutY="90.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="green_coin_1" alignment="CENTER" layoutX="430.0" layoutY="48.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="green_coin_2" alignment="CENTER" layoutX="463.0" layoutY="49.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="green_coin_3" alignment="CENTER" layoutX="431.0" layoutY="90.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="green_coin_4" alignment="CENTER" layoutX="463.0" layoutY="90.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="yellow_coin_1" alignment="CENTER" layoutX="418.0" layoutY="408.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="yellow_coin_2" alignment="CENTER" layoutX="451.0" layoutY="408.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="yellow_coin_3" alignment="CENTER" layoutX="418.0" layoutY="449.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="yellow_coin_4" alignment="CENTER" layoutX="450.0" layoutY="449.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="red_coin_1" alignment="CENTER" layoutX="53.0" layoutY="408.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="red_coin_2" alignment="CENTER" layoutX="86.0" layoutY="408.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="red_coin_3" alignment="CENTER" layoutX="54.0" layoutY="449.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
+            <Label fx:id="red_coin_4" alignment="CENTER" layoutX="86.0" layoutY="449.0" prefHeight="17.0" prefWidth="13.0" text="\$" />
          </children></AnchorPane>
       <AnchorPane layoutX="650.0" layoutY="128.0" prefHeight="345.0" prefWidth="176.0" style="-fx-background-color: #787e87;">
          <children>
@@ -122,7 +199,6 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="next_button" layoutX="68.0" layoutY="298.0" mnemonicParsing="false" onAction="#onCoinButton" text="Next" />
          </children>
       </AnchorPane>
    </children>
