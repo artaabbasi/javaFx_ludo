@@ -33,7 +33,7 @@ public class Coin implements Serializable {
             return abs;
         }
         else if( type.equals(2)){
-            Integer abs = pos + 34;
+            Integer abs = pos + 33;
             if (abs > 44){
                 abs = abs - 44;
             }
@@ -64,7 +64,7 @@ public class Coin implements Serializable {
                 }
             } else {
                 Integer coins_abs = coin.abs_position();
-                if (coins_abs.equals(this.get_abs_position(position))) {
+                if (coin.type.equals(this.type) && coins_abs.equals(this.get_abs_position(position))) {
                     return false;
                 }
             }
@@ -94,7 +94,7 @@ public class Coin implements Serializable {
                 }
             }else{
                 Integer coins_abs = coin.abs_position();
-                if (coins_abs.equals(this.get_abs_position(positionnnn))) {
+                if (coin.type.equals(this.type) && coins_abs.equals(this.get_abs_position(positionnnn))) {
                     return false;
                 }
             }

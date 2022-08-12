@@ -113,16 +113,6 @@ public class GameController {
             for (Player player : players) {
                 if (flag) {
                     turn = player.number;
-                    if (turn == 1){
-                        turn_crcl.setFill(Color.GREEN);
-                    }else if (turn == 2){
-                        turn_crcl.setFill(Color.RED);
-                    }else if (turn == 3){
-                        turn_crcl.setFill(Color.BLUE);
-                    }else if (turn == 4){
-                        turn_crcl.setFill(Color.YELLOW);
-                    }
-
                     for (Coin c : this_type_coins){
                         Integer position = c.abs_position();
                         String pos_text = "";
@@ -146,9 +136,18 @@ public class GameController {
                         }else if (c.id == 4) {
                             coin_4_text.setText(pos_text);
                         }
-
-
                     }
+                    if (turn == 1){
+                        turn_crcl.setFill(Color.GREEN);
+                    }else if (turn == 2){
+                        turn_crcl.setFill(Color.RED);
+                    }else if (turn == 3){
+                        turn_crcl.setFill(Color.BLUE);
+                    }else if (turn == 4){
+                        turn_crcl.setFill(Color.YELLOW);
+                    }
+
+
                     return;
                 }
                 if (player.number == turn) {
@@ -170,6 +169,34 @@ public class GameController {
             turn_crcl1.setFill(Color.BLUE);
         }else if (turn == 4){
             turn_crcl1.setFill(Color.YELLOW);
+        }
+        ArrayList<Coin> this_type_coins = new ArrayList<Coin>();
+        for (Coin c : coins) {
+            if (c.type.equals(turn)) {
+                this_type_coins.add(c);
+            }
+        }
+        for (Coin c : this_type_coins) {
+            Integer position = c.abs_position();
+            String pos_text = "";
+            if (c.position == 0) {
+                pos_text = " ";
+            } else if (position > 100) {
+                Integer posss = position - 100;
+                pos_text = "#" + posss.toString();
+            } else {
+                pos_text = position.toString();
+            }
+
+            if (c.id == 1) {
+                coin_1_text.setText(pos_text);
+            } else if (c.id == 2) {
+                coin_2_text.setText(pos_text);
+            } else if (c.id == 3) {
+                coin_3_text.setText(pos_text);
+            } else if (c.id == 4) {
+                coin_4_text.setText(pos_text);
+            }
         }
     }
     public void onDiceButton(ActionEvent clickEvent) throws IOException {
@@ -310,8 +337,67 @@ public class GameController {
                         return;
                     }
                     Integer position = use_coin.abs_position();
-                    String pos_text = "";
-                    if (use_coin.position == 0) {
+                    for (Coin c : coins) {
+                        Integer c_pos = c.abs_position();
+                        if (!c.type.equals(use_coin.type) && c_pos.equals(position)) {
+                            c.position = 0;
+                            String c_pos_text = "";
+                            if (c.position == 0) {
+                                c_pos_text = "$";
+                            }
+                            else if (position > 100) {
+                                Integer posss = position - 100;
+                                c_pos_text = "#" + posss.toString();
+                            }
+                            else {
+                                c_pos_text = position.toString();
+                            }
+                            if (c.id == 1) {
+                                if (c.type == 1) {
+                                    green_coin_1.setText(c_pos_text);
+                                } else if (c.type == 2) {
+                                    red_coin_1.setText(c_pos_text);
+                                } else if (c.type == 3) {
+                                    blue_coin_1.setText(c_pos_text);
+                                } else if (c.type == 4) {
+                                    yellow_coin_1.setText(c_pos_text);
+                                }
+                            } else if (c.id == 2) {
+                                if (c.type == 1) {
+                                    green_coin_2.setText(c_pos_text);
+                                } else if (c.type == 2) {
+                                    red_coin_2.setText(c_pos_text);
+                                } else if (c.type == 3) {
+                                    blue_coin_2.setText(c_pos_text);
+                                } else if (c.type == 4) {
+                                    yellow_coin_2.setText(c_pos_text);
+                                }
+                            } else if (c.id == 3) {
+                                if (c.type == 1) {
+                                    green_coin_3.setText(c_pos_text);
+                                } else if (c.type == 2) {
+                                    red_coin_3.setText(c_pos_text);
+                                } else if (c.type == 3) {
+                                    blue_coin_3.setText(c_pos_text);
+                                } else if (c.type == 4) {
+                                    yellow_coin_3.setText(c_pos_text);
+                                }
+                            } else if (c.id == 4) {
+                                if (c.type == 1) {
+                                    green_coin_4.setText(c_pos_text);
+                                } else if (c.type == 2) {
+                                    red_coin_4.setText(c_pos_text);
+                                } else if (c.type == 3) {
+                                    blue_coin_4.setText(c_pos_text);
+                                } else if (c.type == 4) {
+                                    yellow_coin_4.setText(c_pos_text);
+                                }
+                            }
+                        }
+
+                    }
+                String pos_text = "";
+                if (use_coin.position == 0) {
                         pos_text = " ";
                     }
                     else if (position > 100) {
@@ -386,6 +472,64 @@ public class GameController {
                     return;
                 }
                 position = use_coin.abs_position();
+                for (Coin c : coins) {
+                    Integer c_pos = c.abs_position();
+                    if (!c.type.equals(use_coin.type) && c_pos.equals(position)) {
+                        String c_pos_text = " ";
+                        c.position = 0;
+                        if (c.position == 0) {
+                            c_pos_text = "$";
+                        }
+                        else if (position > 100) {
+                            Integer posss = position - 100;
+                            c_pos_text = "#" + posss.toString();
+                        }
+                        else {
+                            c_pos_text = position.toString();
+                        }
+                        if (c.id == 1) {
+                            if (c.type == 1) {
+                                green_coin_1.setText(c_pos_text);
+                            } else if (c.type == 2) {
+                                red_coin_1.setText(c_pos_text);
+                            } else if (c.type == 3) {
+                                blue_coin_1.setText(c_pos_text);
+                            } else if (c.type == 4) {
+                                yellow_coin_1.setText(c_pos_text);
+                            }
+                        } else if (c.id == 2) {
+                            if (c.type == 1) {
+                                green_coin_2.setText(c_pos_text);
+                            } else if (c.type == 2) {
+                                red_coin_2.setText(c_pos_text);
+                            } else if (c.type == 3) {
+                                blue_coin_2.setText(c_pos_text);
+                            } else if (c.type == 4) {
+                                yellow_coin_2.setText(c_pos_text);
+                            }
+                        } else if (c.id == 3) {
+                            if (c.type == 1) {
+                                green_coin_3.setText(c_pos_text);
+                            } else if (c.type == 2) {
+                                red_coin_3.setText(c_pos_text);
+                            } else if (c.type == 3) {
+                                blue_coin_3.setText(c_pos_text);
+                            } else if (c.type == 4) {
+                                yellow_coin_3.setText(c_pos_text);
+                            }
+                        } else if (c.id == 4) {
+                            if (c.type == 1) {
+                                green_coin_4.setText(c_pos_text);
+                            } else if (c.type == 2) {
+                                red_coin_4.setText(c_pos_text);
+                            } else if (c.type == 3) {
+                                blue_coin_4.setText(c_pos_text);
+                            } else if (c.type == 4) {
+                                yellow_coin_4.setText(c_pos_text);
+                            }
+                        }
+                    }
+                }
                 String pos_text = "";
                 if (use_coin.position == 0) {
                     pos_text = " ";
